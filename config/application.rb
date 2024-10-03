@@ -10,6 +10,10 @@ module Mytask
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 6.1
+    config.time_zone = 'Kaliningrad'
+    config.active_record.default_timezone = :local
+    config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}')]
+    config.i18n.default_locale = :ru
 
     # Configuration for the application, engines, and railties goes here.
     #
